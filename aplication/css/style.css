@@ -1,0 +1,16 @@
+@import url('default.css');
+
+body {
+  background-color: var(--color-light);
+  font-family: var(--font-display);
+}
+
+button {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  color: white;
+}
+
+body.dark {
+  background-color: var(--color-dark);
+}

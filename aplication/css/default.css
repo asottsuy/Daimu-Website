@@ -1,0 +1,61 @@
+/* ==============================
+   🌐 RESET BÁSICO
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove decoração e herança inconsistente */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==============================
+   🎨 VARIÁVEIS GERAIS
+   ============================== */
+:root {
+  /* Cores principais */
+  --color-primary: #EA2831;
+  --color-secondary: #333333;
+  --color-light: #f8f6f6;
+  --color-dark: #211111;
+  --color-text: #222222;
+  --color-text-light: #ffffff;
+
+  /* Tipografia */
+  --font-base: 'Arial', sans-serif;
+  --font-display: 'Newsreader', serif;
+
+  /* Tamanhos de fonte */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+
+  /* Bordas e espaçamento */
+  --radius-sm: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
+
+  /* Transições padrão */
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* 🌙 Tema escuro */
+.dark {
+  --color-light: #f8f6f6;
+  --color-dark: #211111;
+  --color-text: #f1f1f1;
+}
