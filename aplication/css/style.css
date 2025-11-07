@@ -13,27 +13,109 @@ button {
 
 body.dark {
   background-color: var(--color-dark);
-  
+
 }
 
-header {
-  position: relative; /* necessário pro pseudo-elemento */
-}
-header
-::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%; 
-  transform: translateX(-50%);
-  width: 80%;        
-  border-bottom: 1px solid var(--color-light);
+.container-menu {
+  height: 800px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.4)),
+    url(/assets/DAIMU_011.JPG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 
-.container {
-    background:(
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(../../assets/DAIMU_006.JPG) no-repeat center center);
-    background-size: cover;
-    height: 500px;
+.navbar {
+  background-color: var(--color-dark);
+  opacity: 0.8;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Estilo do Botão Hambúrguer (só aparece em mobile) */
+#menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  display: block;
+  /* Visível por padrão em mobile */
+}
+
+/* Estilo da Lista de Menu */
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+}
+
+.nav-menu li a:hover {
+  background-color: #575757;
+}
+
+/* Estilos para Mobile (usando a classe 'active' que o jQuery vai adicionar) */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: auto;
+    max-height: 0;
+    /* Começa com altura zero, esconde o conteúdo */
+    overflow: hidden;
+    /* Garante que o conteúdo não vaze */
+    transition: max-height 0.3s ease-in-out;
+    /* Adiciona a transição suave */
+    display: flex;
+    /* Mantenha display: flex, mas escondido pelo max-height */
+
+    /* Propriedades do Menu Mobile */
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--color-dark);
+    max-width: 50%;
+    width: 250px;
+    /* Ajuda o browser a calcular */
+  }
+
+  /* CHAVE: Adicione a classe que será ativada pelo jQuery */
+  .nav-menu.is-open {
+    /* Defina uma altura grande o suficiente para o seu menu (ex: 500px) */
+    max-height: 500px;
+  }
+}
+
+/* Esconder o botão hambúrguer em desktop */
+@media screen and (min-width: 769px) {
+  #menu {
+    display: none;
+    /* Esconde o botão em telas maiores */
+  }
+
+  .nav-menu {
+    display: flex !important;
+    /* Garante que o menu esteja visível no desktop */
+  }
 }
