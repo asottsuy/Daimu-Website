@@ -86,7 +86,7 @@ body.dark {
 /* SECTION 2 ORIGEM*/
 
 #origem {
-  height: 100vh;
+  border-bottom: 0.5px solid var(--color-golden);
 }
 
 .our-story {
@@ -94,27 +94,62 @@ body.dark {
       rgba(0, 0, 0, 0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp8Vlfd28gLf6HR9CA-NeLZJBfa4LzkKGroFsbhX10xByKqx-YRj-Ux3dXqUEBMpLyi7-dwzkUQ9jDH0ggs_ZeD4yThO-nZErzR-nPNz79el70NzoTacnpAi7LU8RzXBkoU1nShxY0_qZNAE606eJg0U4dxqMc6PW9LZrKj-vFcuSJv1wfU9IT-hxw-1K1W4IiNgHhlHaEbBWGoZU55La0I_fUHwdz_9TuygGYa8vZaYfTnnQJUT_tjDFsuAYtFmjljTn5phk4");
   background-position: center;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 25vh;
+  height: 30vh;
   display: flex;
   flex-direction: column-reverse;
 }
 
 .our-story>h1 {
-  padding-left: 20px;
-  font-size: 36px;
+  padding: 0 0 20px 40px;
+  font-size: 56px;
 }
 
 .our-philosophy h2 {
-  font-size: 26px;
+  font-size: 36px;
   color: var(--color-golden);
   padding-top: 10%;
 }
 
+.our-philosophy p {
+  font-size: 20px;
+  padding: 0 10%;
+}
 
 
+/* SECTION 3 GALERIA */
 
+#galeria {
+  height: 100vh;
+}
+.imagem-principal {
+  margin-top: 5vh;
+  background-image: url(/assets/DAIMU_011.JPG);
+  background-repeat: no-repeat;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.imagem-principal > h2 {
+  font-size: 66px;
+  font-weight: 600;
+}
+
+.fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.fotos img{
+  height: 160px;
+}
 
 @media screen and (max-width: 768px) {
   .nav-menu {
@@ -146,8 +181,6 @@ body.dark {
   .navbar {
     height: 60px;
   }
-
-  .navbar::after {}
 }
 
 
@@ -169,6 +202,11 @@ body.dark {
     padding: 60px;
     justify-content: center;
     align-items: center;
+  }
+
+  .our-story>h1 {
+    padding: 0 0 20px 10%;
+    font-size: 76px;
   }
 
 }
