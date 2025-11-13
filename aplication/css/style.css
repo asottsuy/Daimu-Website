@@ -24,9 +24,10 @@ body.dark {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position:relative;
+  position: relative;
   z-index: 1;
   color: white;
+  border-bottom: 0.5px solid var(--color-golden);
 }
 
 .navbar {
@@ -34,11 +35,12 @@ body.dark {
   opacity: 1;
   color: white;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   position: fixed;
   width: 100%;
+  border-bottom: 0.5px solid var(--color-golden);
 }
 
 .logo {
@@ -88,12 +90,28 @@ body.dark {
 }
 
 .our-story {
-  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp8Vlfd28gLf6HR9CA-NeLZJBfa4LzkKGroFsbhX10xByKqx-YRj-Ux3dXqUEBMpLyi7-dwzkUQ9jDH0ggs_ZeD4yThO-nZErzR-nPNz79el70NzoTacnpAi7LU8RzXBkoU1nShxY0_qZNAE606eJg0U4dxqMc6PW9LZrKj-vFcuSJv1wfU9IT-hxw-1K1W4IiNgHhlHaEbBWGoZU55La0I_fUHwdz_9TuygGYa8vZaYfTnnQJUT_tjDFsuAYtFmjljTn5phk4");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp8Vlfd28gLf6HR9CA-NeLZJBfa4LzkKGroFsbhX10xByKqx-YRj-Ux3dXqUEBMpLyi7-dwzkUQ9jDH0ggs_ZeD4yThO-nZErzR-nPNz79el70NzoTacnpAi7LU8RzXBkoU1nShxY0_qZNAE606eJg0U4dxqMc6PW9LZrKj-vFcuSJv1wfU9IT-hxw-1K1W4IiNgHhlHaEbBWGoZU55La0I_fUHwdz_9TuygGYa8vZaYfTnnQJUT_tjDFsuAYtFmjljTn5phk4");
   background-position: center;
   width: 100%;
-  background-size: cover;
-  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 25vh;
+  display: flex;
+  flex-direction: column-reverse;
 }
+
+.our-story>h1 {
+  padding-left: 20px;
+  font-size: 36px;
+}
+
+.our-philosophy h2 {
+  font-size: 26px;
+  color: var(--color-golden);
+  padding-top: 10%;
+}
+
 
 
 
@@ -129,9 +147,7 @@ body.dark {
     height: 60px;
   }
 
-  .navbar::after {
-    
-  }
+  .navbar::after {}
 }
 
 
@@ -142,6 +158,17 @@ body.dark {
 
   .nav-menu {
     display: flex !important;
+  }
+
+  .our-philosophy img {
+    width: auto;
+    padding: 0 30px;
+  }
+
+  .description {
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
   }
 
 }

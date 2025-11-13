@@ -28,6 +28,7 @@ img {
 :root {
   /* Cores principais */
   --color-primary: #EA2831;
+  --color-golden: #B48C2C;
   --color-secondary: #333333;
   --color-light: #f8f6f6;
   --color-dark: #211111;
