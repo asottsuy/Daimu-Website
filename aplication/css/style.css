@@ -9,6 +9,8 @@ button {
   background-color: var(--color-primary);
   border-radius: var(--radius-lg);
   color: white;
+  width: 50%;
+  height: 5vh;
 }
 
 body.dark {
@@ -41,6 +43,7 @@ body.dark {
   position: fixed;
   width: 100%;
   border-bottom: 0.5px solid var(--color-golden);
+  z-index: 1000;
 }
 
 .logo {
@@ -49,7 +52,7 @@ body.dark {
 }
 
 /* Estilo do Botão Hambúrguer (só aparece em mobile) */
-#menu {
+#hamburguer {
   background: none;
   border: none;
   color: white;
@@ -96,7 +99,7 @@ body.dark {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30vh;
+  height: 40vh;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -117,40 +120,84 @@ body.dark {
   padding: 0 10%;
 }
 
+.imagem-arredondada {
+  border-radius: 10px !important;
+  overflow: hidden;
+}
 
 /* SECTION 3 GALERIA */
 
 #galeria {
-  height: 100vh;
+  border-bottom: 0.5px solid var(--color-golden);
 }
+
 .imagem-principal {
   margin-top: 5vh;
   background-image: url(/assets/DAIMU_011.JPG);
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 40vh;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.imagem-principal > h2 {
-  font-size: 66px;
+.imagem-principal>h1{
+  font-size: 76px;
   font-weight: 600;
 }
 
 .fotos {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  padding-bottom: 5vh;
+  justify-content: center;
 }
 
-.fotos img{
-  height: 160px;
+.fotos img {
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 
+/* SECTION 4 MENU */
+
+#menu {
+  border-bottom: 0.5px solid var(--color-golden);
+  height: 120vh;
+  margin-top: 3vh;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+}
+
+.titulo h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.titulo p {
+  font-size: 20px;
+  padding: 0 10%;
+}
+
+.sequencia-lacarte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sequencia-lacarte h2 {
+  color: var(--color-golden);
+}
+
+
+/* Mobile */
 @media screen and (max-width: 768px) {
   .nav-menu {
     position: absolute;
@@ -183,9 +230,9 @@ body.dark {
   }
 }
 
-
+/* Desktop */
 @media screen and (min-width: 769px) {
-  #menu {
+  #hamburguer {
     display: none;
   }
 
@@ -209,4 +256,34 @@ body.dark {
     font-size: 76px;
   }
 
+  .imagem-principal {
+    height: 70vh;
+  }
+
+  .owl-carousel .owl-item {
+    width: 24% !important;
+  }
+
+  .fotos img {
+    height: 100%;
+    padding: 8px 2px;
+  }
+
+  .sequencia-lacarte {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .menus {
+    width: 48%;
+  }
+
+  .titulo h1 {
+    font-size: 76px;
+    font-weight: 600;
+  }
+
+  #menu {
+    height: 100vh;
+  }
 }
