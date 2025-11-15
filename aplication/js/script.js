@@ -13,6 +13,27 @@ $(document).ready(function () {
         }
     });
 
+
+    $('.titulos .tab-title').on('click', function () {
+        const $clickedTitle = $(this);
+        const targetId = $clickedTitle.data('target');
+        const $targetContent = $(targetId);
+
+        if ($clickedTitle.hasClass('titulo-ativo')) {
+            return;
+        }
+
+        $('.titulos .tab-title').removeClass('titulo-ativo');
+        $clickedTitle.addClass('titulo-ativo');
+
+        $('.espacos-evento .description').not(targetId).stop(true, true).fadeOut(300);
+
+        $targetContent.stop(true, true).css('display', 'flex').hide().fadeIn(300);
+    });
+
+
+    $('.omakase-text').trigger('click');
+
     $(".fotos.owl-carousel").owlCarousel({
         margin: 10,
         loop: true,
@@ -31,8 +52,8 @@ $(document).ready(function () {
             },
             768: {
                 items: 10,
-                loop: false, 
-                nav: false, 
+                loop: false,
+                nav: false,
                 dots: false,
                 touchDrag: false,
                 mouseDrag: false
