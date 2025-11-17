@@ -26,9 +26,9 @@ $(document).ready(function () {
         $('.titulos .tab-title').removeClass('titulo-ativo');
         $clickedTitle.addClass('titulo-ativo');
 
-        $('.espacos-evento .description').not(targetId).stop(true, true).fadeOut(300);
+        $('.espacos-evento .description').not(targetId).stop(true, true).fadeOut(500);
 
-        $targetContent.stop(true, true).css('display', 'flex').hide().fadeIn(300);
+        $targetContent.stop(true, true).css('display', 'flex').hide().fadeIn(500);
     });
 
 
