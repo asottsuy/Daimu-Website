@@ -5,18 +5,35 @@ body {
   font-family: var(--font-display);
 }
 
-button {
+.button {
   background-color: var(--color-primary);
   border-radius: var(--radius-lg);
   color: white;
   width: 50%;
   height: 5vh;
+  border: 0;
 }
 
 body.dark {
   background-color: var(--color-dark);
 
 }
+
+.footer {
+  height: 10vh;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-img {
+  height: 4vh;
+}
+
 
 .container-menu {
   height: 100vh;
@@ -32,6 +49,10 @@ body.dark {
   border-bottom: 0.5px solid var(--color-golden);
 }
 
+.home-title {
+  font-size: 42px;
+}
+
 .navbar {
   background-color: var(--color-dark);
   opacity: 1;
@@ -44,6 +65,9 @@ body.dark {
   width: 100%;
   border-bottom: 0.5px solid var(--color-golden);
   z-index: 1000;
+}
+.navbar h1 {
+  font-size: 36px;
 }
 
 .logo {
@@ -133,6 +157,7 @@ body.dark {
 
 .imagem-principal {
   margin-top: 5vh;
+  margin-bottom: 1vh;
   background-image: url(/assets/DAIMU_011.JPG);
   background-repeat: no-repeat;
   height: 40vh;
@@ -202,6 +227,8 @@ body.dark {
   color: var(--color-golden);
 }
 
+/* Section 5 evento */
+
 #evento {
   border-bottom: 0.5px solid var(--color-golden);
 }
@@ -249,6 +276,32 @@ body.dark {
   cursor: pointer
 }
 
+.box-evento {
+  background-color: var(--color-primary-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin: 5vh 0;
+  text-align: center;
+}
+
+.box-evento h3 {
+  color: var(--color-light) !important;
+  font-size: 32px;
+}
+
+.box-evento p {
+  color: var(--color-light);
+  padding-bottom: 3vh;
+}
+
+.box-evento button {
+  width: 70% !important;
+}
+
+/* Section 6 form */
 #form {
   height: 100vh;
   border-bottom: var(--color-golden);
@@ -259,7 +312,7 @@ body.dark {
   border-bottom: 0.5px solid var(--color-light);
 }
 
-.form-titulo > h2 {
+.form-titulo>h2 {
   color: var(--color-primary);
   font-size: 46px;
 }
@@ -273,6 +326,8 @@ body.dark {
   padding: 0 0 2vh 0;
 }
 
+
+
 input {
   border-radius: 10px;
   border: 0.5px solid var(--color-light);
@@ -283,17 +338,18 @@ input {
   color: var(--color-light);
 }
 
-.input-text p{
+.input-text p {
   font-weight: 600;
-  font-size: 28px;
+  font-size: 20px;
   color: var(--color-primary);
+  margin-bottom: 0 !important;
 }
 
 /* Mobile */
 @media screen and (max-width: 768px) {
   .nav-menu {
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 0;
     left: auto;
     max-height: 0;
@@ -318,7 +374,8 @@ input {
   }
 
   .navbar {
-    height: 60px;
+    height: 70px;
+    
   }
 
   .titulos h3 {
@@ -382,5 +439,13 @@ input {
 
   #menu {
     height: 90vh;
+  }
+
+  .input-text p {
+    font-size: 28px;
+  }
+
+  .box-evento button {
+    width: 70% !important;
   }
 }
