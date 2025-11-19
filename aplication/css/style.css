@@ -10,7 +10,7 @@ body {
   border-radius: var(--radius-lg);
   color: white;
   width: 50%;
-  height: 5vh;
+  height: 6vh;
   border: 0;
 }
 
@@ -302,9 +302,9 @@ body.dark {
 }
 
 /* Section 6 form */
-#form {
-  height: 100vh;
-  border-bottom: var(--color-golden);
+#formulario {
+  height: 90vh;
+  border-bottom: 0.5px solid var(--color-golden);
 }
 
 .form-titulo {
@@ -326,7 +326,40 @@ body.dark {
   padding: 0 0 2vh 0;
 }
 
+#fale-conosco {
+  margin-top: 10vh;
+  height: 90vh;
+}
 
+.nos-visite h2 {
+  font-size: 58px;
+  font-weight: 800;
+}
+
+.info {
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  padding: 5vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.info h4 {
+  font-size: 22px;
+  width: 30%;
+  row-gap: 5vh;
+}
+
+.fale-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fale-button .button {
+  width: 45%;
+  margin: 5vh 0;
+}
 
 input {
   border-radius: 10px;
@@ -382,6 +415,13 @@ input {
     font-size: 22px !important;
   }
 
+  #fale-conosco .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fa
+
 }
 
 /* Desktop */
@@ -392,7 +432,14 @@ input {
 
   .nav-menu {
     display: flex !important;
+    font-size: 20px;
+    font-weight: 600;
   }
+
+  .navbar h1 {
+    font-size: 40px;
+  }
+  
 
   .our-philosophy img {
     width: auto;
