@@ -37,13 +37,14 @@
         <i class="fa-solid fa-bars py-2 fs-5" id="hamburguer">
         </i>
         <ul class="nav-menu">
-          <li><a href="#">INÍCIO</a></li>
-          <li><a href="#">ORIGEM</a></li>
-          <li><a href="#">GALERIA</a></li>
-          <li><a href="#">MENU</a></li>
-          <li><a href="#">EVENTOS</a></li>
-          <li><a href="#">CONTATOS</a></li>
-          <li><a href="#">FAÇA SUA RESERVA</a></li>
+          <li><a href="#">INÍCIO <span>スタート</span></a></li>
+          <li><a href="#">ORIGEM - <span>オリジン</span></a></li>
+          <li><a href="#">GALERIA - <span>ギャラリー</span></a></li>
+          <li><a href="#">MENU - <span>メニュー</span></a></li>
+          <li><a href="#">EVENTOS - <span>イベント</span></a></li>
+          <li><a href="#">CONTATOS - <span>コンタクト</span></a></li>
+          <li><a href="#">FAÇA SUA RESERVA - <span>ヨヤク コチラ</span></a></li>
+
         </ul>
       </nav>
     </header>
@@ -51,7 +52,7 @@
     <!-- Home section 1 -->
     <section id="home">
       <div class="text-center align-items-center justify-content-center d-flex flex-column">
-        <h1 class="home-title font-bold">The Art of Sushi, Masterfully Crafted</h1>
+        <h1 class="home-title font-bold zen-old-mincho-regular">寿司の芸術, 巧みに作られる</h1>
         <p id="home-description" class="px-5">Experience an unforgettable culinary journey with the finest ingredients
           and traditional techniques, elevated to a modern art form.</p>
       </div>
@@ -61,7 +62,7 @@
   <!-- Origem section 2-->
   <section id="origem">
     <div class="our-story">
-      <h1 class="text-white">Our Story</h1>
+      <h1 class="text-white">Origem - <span class="zen-old-mincho-regular">オリジン</span></h1>
     </div>
     <div class="our-philosophy">
       <div class="px-5">
@@ -96,7 +97,7 @@
   <section id="galeria">
     <div class="container-md">
       <div class="imagem-principal imagem-arredondada mb-5">
-        <h1 class="text-center text-white">Galeria</h1>
+        <h1 class="text-center text-white">Galeria - <span class="zen-old-mincho-regular">ギャラリー</span></h1>
       </div>
       <!-- <h1 class="text-white py-5 px-4">Our Gallery</h2> -->
       <div class="fotos owl-carousel owl-theme">
@@ -122,7 +123,7 @@
 
       <div class="sequencia-lacarte">
         <div class="menus me-lg-5">
-          <img src="/assets/DAIMU_006.JPG" class="imagem-arredondada">
+          <img src="/assets/DAIMU_006" class="imagem-arredondada">
           <div class="py-4 px-4">
             <h2>Sequencia</h2>
             <p class="text-white">Explore the finest ingredients, curated by our master chefs into two distinct dining
@@ -198,10 +199,11 @@
       <div class="agende-evento">
         <div class="container">
           <div class="box-evento">
-            <h3 class="px-3">Plan Your Perfect Event</h3>
+            <h3 class="px-3">Planeje Seu Evento Perfeito</h3>
             <p class="px-3">Contact our events coordinator directly on Whatsapp to discuss your vision and check
               availability</p>
-            <button class="mb-3 button">Nos Contate via-Whatsapp</button>
+            <button class="mb-3 button" onclick="window.location.href='https://wa.me/555192199690'">Nos Contate
+              via-Whatsapp</button>
           </div>
         </div>
       </div>
@@ -258,7 +260,7 @@
     <div class="container d-flex">
       <div class="nos-visite col-md-6">
         <div class="textos">
-          <h2 class="text-white">Visit Us</h2>
+          <h2 class="text-white">Nos Visite</h2>
           <div class="pt-5">
             <div class="info">
               <h4>Location</h4>
@@ -266,8 +268,10 @@
             </div>
             <div class="info">
               <h4>Contato</h4>
-              <p class="pe-3">(51) 99999-9999</p>
-              <p>daimu.moinhos@gmail.com.br</p>
+              <div class="d-flex-column info-p">
+                <p class="w-100">(51) 99999-9999</p>
+                <p>daimu.moinhos@gmail.com.br</p>
+              </div>
             </div>
             <div class="info">
               <h4>Hoŕaio de Funcionamento</h4>
@@ -278,13 +282,16 @@
           </div>
         </div>
         <div class="fale-button">
-          <button class="button">Veja no Mapa</button>
-          <button class="button">Faça uma Reserva</button>
+          <button class="button mapa-button">Veja no Mapa</button>
+          <button class="button" onclick="window.location.href='https://wa.me/555192199690'">Faça uma Reserva</button>
         </div>
 
       </div>
-      <div class="mapa col-md-6 ms-5">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4544649087384!2d-51.20543052353168!3d-30.02381713032175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979b7ba76b94d%3A0x78e0ae5e13eae461!2sDaimu%20Cozinha%20Japonesa!5e0!3m2!1spt-BR!2sbr!4v1763583214041!5m2!1spt-BR!2sbr" width="100%" height="93%" style="border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="mapa col-md-6 ms-md-5">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4544649087384!2d-51.20543052353168!3d-30.02381713032175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979b7ba76b94d%3A0x78e0ae5e13eae461!2sDaimu%20Cozinha%20Japonesa!5e0!3m2!1spt-BR!2sbr!4v1763583214041!5m2!1spt-BR!2sbr"
+          style="border-radius: 10px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -293,22 +300,22 @@
   <footer class="container">
     <div class="footer">
       <div class="d-flex align-items-center justify-content-around w-100 py-3">
-        <a class="" href="#">Privacy Policy</a>
-        <a class="" href="#">Terms of Service</a>
-        <a class="" href="#">Contact Us</a>
+        <a class="" href="#">Política de Privacidade</a>
+        <a class="" href="#">Termos de serviço</a>
+        <a class="" target="_blank" href="https://wa.me/555192199690">Entre em contato</a>
       </div>
       <div class="d-flex justify-content-between w-25 py-2">
-        <a class="" href="#">
-          <span class="material-symbols-outlined">camera</span> <!-- Placeholder for Instagram icon -->
+        <a class="" target="_blank" href="https://www.facebook.com/daimupoa/?locale=pt_BR">
+          <i class="fab fa-facebook"></i>
         </a>
-        <a class="" href="#">
-          <span class="material-symbols-outlined">group</span> <!-- Placeholder for Facebook icon -->
+        <a class="" target="_blank" href="https://www.instagram.com/daimu_poa/">
+          <i class="fab fa-instagram"></i>
         </a>
-        <a class="" href="#">
-          <span class="material-symbols-outlined">sms</span> <!-- Placeholder for Twitter/X icon -->
+        <a class="" target="_blank" href="https://wa.me/555192199690">
+          <i class="fab fa-whatsapp"></i>
         </a>
       </div>
-      <p class="pb-5">© 2024 Sushi Restaurant. All Rights Reserved.</p>
+      <p class="pb-5">© 2025 Restaurante Daimu. Todos os direitos reservados.</p>
     </div>
   </footer>
 

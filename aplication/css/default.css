@@ -22,10 +22,12 @@ img {
   display: block;
 }
 
+
 :root {
 
-  --color-primary: rgba(234, 40, 49, 0.5);;
+  --color-primary: rgba(234, 40, 49, 0.5);
   --color-primary-light: rgba(255, 255, 255, 0.05);
+  --color-primary-normal: rgba(234, 40, 49, 0.2);
   --color-golden: #B48C2C;
   --color-secondary: #333333;
   --color-light: #f8f6f6;

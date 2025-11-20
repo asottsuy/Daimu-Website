@@ -69,3 +69,21 @@ $(document).ready(function () {
         }
     });
 });
+
+var hasClicked = true
+
+$('.mapa-button').on('click', function () {
+    const $iframe = $(document.getElementsByClassName('mapa'));
+
+    if ($(window).width() <= 768) {
+
+        if (hasClicked) {
+            $iframe.css('display', '').fadeIn(1000);
+            hasClicked = false
+        } else {
+            $iframe.css('display', 'none').hide().fadeOut(500);
+            hasClicked = true
+        }
+    }
+    
+})
