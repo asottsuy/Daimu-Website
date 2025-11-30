@@ -39,32 +39,25 @@ $(document).ready(function () {
         loop: true,
         nav: false,
         dots: true,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 5000,
         touchDrag: true,
         mouseDrag: true,
+        infinite: false,
 
         responsive: {
             0: {
                 items: 1.1,
                 stagePadding: 10,
+                dots: false,
 
             },
             768: {
-                items: 10,
-                loop: false,
-                nav: false,
-                dots: false,
-                touchDrag: false,
-                mouseDrag: false
+                items: 1,
+
             },
             1200: {
-                items: 8,
-                loop: false,
-                nav: false,
-                dots: false,
-                touchDrag: false,
-                mouseDrag: false
+                items: 1,
             }
         }
     });
@@ -85,5 +78,5 @@ $('.mapa-button').on('click', function () {
             hasClicked = true
         }
     }
-    
+
 })

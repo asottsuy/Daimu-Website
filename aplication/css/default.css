@@ -13,7 +13,8 @@ a {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -52,6 +53,28 @@ img {
 
   /* Transições padrão */
   --transition-fast: 0.2s ease-in-out;
+  --text-xs: 12px;
+  /* Legendas minúsculas, spans */
+  --text-sm: 18px;
+  /* Texto secundário, info mobile */
+  --text-base: 20px;
+  /* Texto padrão de parágrafos */
+  --text-md: 24px;
+  /* Texto destaque, menus desktop */
+  --text-lg: 28px;
+  /* Inputs grandes, destaques home */
+
+  --text-xl: 32px;
+  /* Subtítulos menores, h3 */
+  --text-2xl: 36px;
+  /* Títulos médios, h2 mobile, navbar */
+  --text-3xl: 46px;
+  /* Títulos grandes, seções */
+  --text-4xl: 56px;
+  /* Títulos Hero mobile, destaques */
+  --text-5xl: 76px;
+
+  --radius-lg: 10px;
 }
 
 /* 🌙 Tema escuro */

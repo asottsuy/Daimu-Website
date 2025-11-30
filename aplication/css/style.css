@@ -1,9 +1,12 @@
 @import url("default.css");
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap');
 
+
 body {
   background-color: var(--color-light);
   font-family: var(--font-display);
+  /* Garante um tamanho base */
+  font-size: var(--text-base);
 }
 
 .button {
@@ -13,16 +16,17 @@ body {
   width: 50%;
   height: 6vh;
   border: 0;
+  /* Opcional: definir tamanho do texto do botão */
+  font-size: var(--text-base);
 }
 
 .button:hover {
-  background-color: var(--color-primary-normal) ;
+  background-color: var(--color-primary-normal);
   transition: 200ms;
 }
 
 body.dark {
   background-color: var(--color-dark);
-
 }
 
 .footer {
@@ -35,11 +39,18 @@ body.dark {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-size: var(--text-xs);
+}
+
+.footer i {
+  color: var(--color-golden);
 }
 
 .logo-img {
-  height: 4vh;
+  height: 6vh;
+  margin: 1vh 0;
 }
+
 img {
   transition: transform 0.3s ease;
 }
@@ -47,7 +58,6 @@ img {
 img:hover {
   transform: scale(1.02) translateY(-5px);
 }
-
 
 .container-menu {
   height: 100vh;
@@ -58,21 +68,28 @@ img:hover {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 1;
   color: white;
   border-bottom: 0.5px solid var(--color-golden);
 }
 
-
+/* Fontes Zen Old Mincho Padronizadas */
 .zen-old-mincho-regular {
   font-family: "Zen Old Mincho", serif !important;
   font-weight: 400;
   font-style: normal;
-  font-size: 72px;
+  font-size: var(--text-3xl);
+}
+
+.zen-old-mincho-light {
+  font-family: "Zen Old Mincho", serif !important;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--text-md);
+  color: var(--color-dark);
 }
 
 .navbar {
-  background-color: var(--color-dark);
+  background-color: rgba(35, 20, 20, 0.9);
   opacity: 1;
   color: white;
   display: flex;
@@ -82,11 +99,12 @@ img:hover {
   position: fixed;
   width: 100%;
   border-bottom: 0.5px solid var(--color-golden);
-  z-index: 1000;
+  z-index: 1000 !important;
 }
 
 .navbar h1 {
-  font-size: 36px;
+  font-size: var(--text-2xl);
+  /* 36px */
 }
 
 .logo {
@@ -94,12 +112,11 @@ img:hover {
   font-weight: bold;
 }
 
-/* Estilo do Botão Hambúrguer (só aparece em mobile) */
+/* Estilo do Botão Hambúrguer */
 #hamburguer {
   background: none;
   border: none;
   color: white;
-  font-size: 2em;
   cursor: pointer;
   display: block;
 }
@@ -111,15 +128,21 @@ img:hover {
   display: flex;
 }
 
-.nav-menu li a span {
-  font-size: 10px;
+.nav-menu li a {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1vh 0;
 }
 
-.nav-menu li a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
+.nav-menu li a span {
   display: block;
+  font-size: var(--text-xs);
+  margin-top: 5px;
+  color: var(--color-golden);
+  line-height: 1;
+  font-weight: 400;
 }
 
 .nav-menu li a:hover {
@@ -133,15 +156,14 @@ img:hover {
   min-height: 90vh;
 }
 
-/* SECTION 2 ORIGEM*/
-
+/* SECTION 2 ORIGEM */
 #origem {
   border-bottom: 0.5px solid var(--color-golden);
 }
 
 .our-story {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp8Vlfd28gLf6HR9CA-NeLZJBfa4LzkKGroFsbhX10xByKqx-YRj-Ux3dXqUEBMpLyi7-dwzkUQ9jDH0ggs_ZeD4yThO-nZErzR-nPNz79el70NzoTacnpAi7LU8RzXBkoU1nShxY0_qZNAE606eJg0U4dxqMc6PW9LZrKj-vFcuSJv1wfU9IT-hxw-1K1W4IiNgHhlHaEbBWGoZU55La0I_fUHwdz_9TuygGYa8vZaYfTnnQJUT_tjDFsuAYtFmjljTn5phk4");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.1)), url("/assets/comer-e-beber-poa-restaurante-daimu-0021.webp");
   background-position: center;
   width: 100%;
   background-size: cover;
@@ -152,18 +174,19 @@ img:hover {
 }
 
 .our-story>h1 {
-  padding: 0 0 20px 40px;
-  font-size: 56px;
+  padding: 0 0 10px 20px;
+  font-size: var(--text-4xl);
+  font-weight: 800
 }
 
 .our-philosophy h2 {
-  font-size: 36px;
+  font-size: var(--text-2xl);
   color: var(--color-golden);
   padding-top: 10%;
 }
 
 .our-philosophy p {
-  font-size: 20px;
+  font-size: var(--text-sm);
   padding: 0 10%;
 }
 
@@ -173,7 +196,6 @@ img:hover {
 }
 
 /* SECTION 3 GALERIA */
-
 #galeria {
   border-bottom: 0.5px solid var(--color-golden);
 }
@@ -181,9 +203,9 @@ img:hover {
 .imagem-principal {
   margin-top: 5vh;
   margin-bottom: 1vh;
-  background-image: url(/assets/DAIMU_011.JPG);
+  background-image: url(/assets/ebi-furai.jpeg);
   background-repeat: no-repeat;
-  height: 40vh;
+  height: 50vh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -192,14 +214,16 @@ img:hover {
 }
 
 .imagem-principal>h1 {
-  font-size: 76px;
-  font-weight: 600;
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .imagem-principal>p {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: var(--text-base);
+  /* 20px */
+  font-weight: 800;
 }
 
 .fotos {
@@ -211,14 +235,35 @@ img:hover {
 
 .fotos img {
   border-radius: 10px !important;
-  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.multi-row-slide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.multi-row-slide .image-container {
+  width: 25%;
+  padding: 5px;
+  box-sizing: border-box;
+
+}
+
+.multi-row-slide .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px !important;
+  display: block;
+    max-height: 400px;
 }
 
 /* SECTION 4 MENU */
-
 #menu {
   border-bottom: 0.5px solid var(--color-golden);
-  height: 120vh;
+  height: 140vh;
   margin-top: 3vh;
 }
 
@@ -231,12 +276,14 @@ img:hover {
 }
 
 .titulo h1 {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: var(--text-3xl);
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
 }
 
 .titulo p {
-  font-size: 20px;
+  font-size: var(--text-base);
   padding: 0 10%;
 }
 
@@ -248,35 +295,44 @@ img:hover {
 
 .sequencia-lacarte h2 {
   color: var(--color-golden);
+  /* Assumindo tamanho padrão de h2 ou herdado */
+  font-size: var(--text-2xl);
 }
 
 /* Section 5 evento */
-
 #evento {
   border-bottom: 0.5px solid var(--color-golden);
 }
 
 #evento h2 {
-  font-size: 46px;
+  font-size: var(--text-2xl);
   color: var(--color-golden);
+}
+
+#evento p {
+  font-size: var(--text-sm);
+}
+
+.titulos h3 {
+  font-size: var(--text-md) !important;
 }
 
 .titulos {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5vh;
+  gap: 3vh;
   border-bottom: 0.5px solid var(--color-light);
 }
 
 .titulos .tab-title {
   color: var(--color-light);
   cursor: pointer;
-
   border-bottom: 2px solid transparent;
   padding-bottom: 10px;
-
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  /* Tamanho não especificado no original, assumindo base */
+  font-size: var(--text-base);
 }
 
 .titulos .tab-title:not(.titulo-ativo):hover {
@@ -286,18 +342,13 @@ img:hover {
 .titulo-ativo {
   border-bottom-color: var(--color-primary);
   color: var(--color-primary) !important;
+  cursor: pointer;
 }
 
 .espacos-evento .description {
   padding: 5vh 0;
-
 }
 
-.titulo-ativo {
-  border-bottom: 2px solid var(--color-primary);
-  color: var(--color-primary) !important;
-  cursor: pointer
-}
 
 .box-evento {
   background-color: var(--color-primary-light);
@@ -312,12 +363,18 @@ img:hover {
 
 .box-evento h3 {
   color: var(--color-light) !important;
-  font-size: 32px;
+  font-size: var(--text-xl);
+}
+
+.box-evento h4 {
+  color: var(--color-light) !important;
+  font-size: var(--text-md);
 }
 
 .box-evento p {
   color: var(--color-light);
   padding-bottom: 3vh;
+  font-size: var(--text-xs);
 }
 
 .box-evento button {
@@ -335,9 +392,14 @@ img:hover {
   border-bottom: 0.5px solid var(--color-light);
 }
 
-.form-titulo>h2 {
-  color: var(--color-primary);
-  font-size: 46px;
+.form-titulo>h1 {
+  color: var(--color-light);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+}
+
+.form-titulo>p {
+  font-size: var(--text-sm);
 }
 
 .inputs {
@@ -355,7 +417,8 @@ img:hover {
 }
 
 .nos-visite h2 {
-  font-size: 58px;
+  /* Padronizado de 58px para 56px (4xl) para consistência, ou crie uma var extra */
+  font-size: var(--text-4xl);
   font-weight: 800;
 }
 
@@ -369,13 +432,15 @@ img:hover {
 }
 
 .info h4 {
-  font-size: 18px;
+  font-size: var(--text-sm);
+  /* 18px */
   row-gap: 5vh;
   width: 50%;
 }
 
 .info p {
   width: 50%;
+  font-size: var(--text-base);
 }
 
 .fale-button {
@@ -399,11 +464,13 @@ input {
   padding: 0 2vh;
   background-color: transparent;
   color: var(--color-light);
+  font-size: var(--text-base);
 }
 
 .input-text p {
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: var(--text-base);
+  /* 20px */
   color: var(--color-primary);
   margin-bottom: 0 !important;
 }
@@ -412,8 +479,6 @@ input {
   min-height: 100%;
   min-width: 90%;
 }
-
-
 
 /* Mobile */
 @media screen and (max-width: 768px) {
@@ -429,8 +494,9 @@ input {
     flex-direction: column;
     align-items: flex-end;
     background-color: var(--color-dark);
-    max-width: 50%;
+    max-width: 60%;
     width: 250px;
+    font-weight: 800;
   }
 
   .nav-menu li {
@@ -445,11 +511,6 @@ input {
 
   .navbar {
     height: 70px;
-
-  }
-
-  .titulos h3 {
-    font-size: 22px !important;
   }
 
   #fale-conosco .container {
@@ -468,12 +529,46 @@ input {
   .mapa iframe {
     min-height: 30vh;
     min-width: auto;
+    padding-bottom: 2vh;
   }
 
   .nos-visite {
     margin-bottom: 5vh;
   }
 
+  .home-title {
+    padding: 0 3vh;
+  }
+
+  .info-p :last-child {
+    text-align: right;
+  }
+
+  .multi-row-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .multi-row-slide .image-container {
+    flex: 0 0 100%;
+    /* grow, nao estica . shrink, mantem o tamanho maximo. tamanho referente a largura do pai*/
+    width: 100%;
+    scroll-snap-align: center;
+    padding: 0 10px;
+  }
+
+  .multi-row-slide .image-container img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    /* Corta a imagem para preencher sem esticar */
+    border-radius: 10px;
+  }
 }
 
 /* Desktop */
@@ -482,16 +577,25 @@ input {
     display: none;
   }
 
+  .footer {
+    font-size: var(--text-md);
+  }
+
   .nav-menu {
     display: flex !important;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: var(--text-sm);
+    /* 18px */
+    font-weight: 800;
   }
 
   .navbar h1 {
-    font-size: 40px;
+    font-size: var(--text-3xl);
+    /* Desktop sobe para ~40-46px */
   }
 
+  .imagem-principal>h1 {
+    font-size: var(--text-5xl);
+  }
 
   .our-philosophy img {
     width: auto;
@@ -505,16 +609,12 @@ input {
   }
 
   .our-story>h1 {
-    padding: 0 0 20px 10%;
-    font-size: 76px;
+    padding: 0 0 20px 22%;
+    font-size: var(--text-5xl);
   }
 
   .imagem-principal {
     height: 70vh;
-  }
-
-  .owl-carousel .owl-item {
-    width: 24% !important;
   }
 
   .fotos img {
@@ -532,16 +632,16 @@ input {
   }
 
   .titulo h1 {
-    font-size: 76px;
-    font-weight: 600;
+    font-size: var(--text-5xl);
+    font-weight: 800;
   }
 
   #menu {
-    height: 90vh;
+    height: 100vh;
   }
 
   .input-text p {
-    font-size: 28px;
+    font-size: var(--text-lg);
   }
 
   .box-evento button {
@@ -553,13 +653,13 @@ input {
   }
 
   .info h4 {
-    font-size: 22px;
+    font-size: var(--text-sm);
     width: 30%;
     row-gap: 5vh;
   }
 
   .info-p :last-child {
-    margin-right: 10vh;
+    margin-right: 5vh;
   }
 
   .fale-button {
@@ -567,7 +667,6 @@ input {
     flex-direction: row;
     justify-content: space-between;
   }
-
 
   .fale-button .button {
     width: 45%;
@@ -585,4 +684,67 @@ input {
     display: flex;
   }
 
+  #home p {
+    font-size: var(--text-lg);
+    margin: 0 30vw;
+  }
+
+
+  .zen-old-mincho-regular {
+    font-family: "Zen Old Mincho", serif !important;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--text-5xl);
+  }
+
+  .zen-old-mincho-light {
+    font-family: "Zen Old Mincho", serif !important;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--text-4xl);
+  }
+
+  .nav-menu li a span {
+    font-size: var(--text-xs);
+  }
+
+  .our-philosophy h2 {
+    font-size: var(--text-4xl);
+    color: var(--color-golden);
+    padding-top: 10%;
+  }
+
+  .our-philosophy p {
+    font-size: var(--text-md);
+    padding: 0 10%;
+  }
+
+  .nav-menu li a {
+    font-size: var(--text-lg);
+    padding: 0 2vh;
+  }
+
+  .titulo>p {
+    font-size: var(--text-md);
+  }
+
+  #evento h2 {
+    font-size: var(--text-4xl);
+  }
+
+  #evento p {
+    font-size: var(--text-md);
+  }
+
+  .titulos {
+    gap: 5vh;
+  }
+
+  #formulario {
+    height: 80vh;
+  }
+
+  .form-titulo>p {
+    font-size: var(--text-md);
+  }
 }

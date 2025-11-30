@@ -31,19 +31,19 @@
     <header>
       <nav class="navbar">
         <div class="d-flex align-items-center ps-md-5">
-          <img src="./assets/daimu-logo.png" class="logo-img" />
+          <img src="./assets/daimu-logo.png" class="logo-img py-1" />
           <h1 class="p-0 pt-2 pt-md-4 m-0 py-md-3">DAIMU</h1>
         </div>
         <i class="fa-solid fa-bars py-2 fs-5" id="hamburguer">
         </i>
         <ul class="nav-menu">
           <li><a href="#">INÍCIO <span>スタート</span></a></li>
-          <li><a href="#">ORIGEM - <span>オリジン</span></a></li>
-          <li><a href="#">GALERIA - <span>ギャラリー</span></a></li>
-          <li><a href="#">MENU - <span>メニュー</span></a></li>
-          <li><a href="#">EVENTOS - <span>イベント</span></a></li>
-          <li><a href="#">CONTATOS - <span>コンタクト</span></a></li>
-          <li><a href="#">FAÇA SUA RESERVA - <span>ヨヤク コチラ</span></a></li>
+          <li><a href="#origem">ORIGEM <span>オリジン</span></a></li>
+          <li><a href="#galeria">GALERIA <span>ギャラリー</span></a></li>
+          <li><a href="#menu">MENU <span>メニュー</span></a></li>
+          <li><a href="#evento">EVENTOS <span>イベント</span></a></li>
+          <li><a href="#formulario">FAÇA SUA RESERVA <span>ヨヤク コチラ</span></a></li>
+          <li><a href="#fale-conosco">CONTATOS <span>コンタクト</span></a></li>
 
         </ul>
       </nav>
@@ -53,8 +53,7 @@
     <section id="home">
       <div class="text-center align-items-center justify-content-center d-flex flex-column">
         <h1 class="home-title font-bold zen-old-mincho-regular">寿司の芸術, 巧みに作られる</h1>
-        <p id="home-description" class="px-5">Experience an unforgettable culinary journey with the finest ingredients
-          and traditional techniques, elevated to a modern art form.</p>
+        <p class="px-5">A verdadeira cozinha autêntica japonesa de Porto Alegre.</p>
       </div>
     </section>
   </div>
@@ -62,20 +61,18 @@
   <!-- Origem section 2-->
   <section id="origem">
     <div class="our-story">
-      <h1 class="text-white">Origem - <span class="zen-old-mincho-regular">オリジン</span></h1>
+      <h1 class="text-white">Origem - <span class="zen-old-mincho-light">オリジン</span></h1>
     </div>
     <div class="our-philosophy">
-      <div class="px-5">
+      <div class="px-md-5">
         <div class="d-flex flex-column flex-md-row col-12 description">
           <div class="col-12 col-md-6 text-center">
-            <h2 class="px-5">Our Founding Philosophy</h2>
-            <p class="text-white"> At Umami Haven, our philosophy is rooted in the pursuit of perfection. We believe
-              that the art of
-              sushi is a delicate balance of tradition, innovation, and the finest ingredients. Our vision is to
+            <h2 class="px-5">Nossa Filosofia</h2>
+            <p class="text-white"> Trabalho em família e respeito à tradicional culinária japonesa. Esses são os pilares do Daimu. No sobrado de fachada antiga e ambiente sóbrio, o chef Emerson Miyamoto conta com as compras diárias de insumos frescos do cunhado Ricardo Aso, que administra o negócio junto com a esposa, Flávia. Laços parentais ainda aparecem na cozinha e no sushi-bar, onde trabalham mais cinco pessoas do círculo familiar do chef, inclusive sua mãe, Miyuki. 
             </p>
           </div>
           <div class="col-12 col-md-6 ">
-            <img src="./assets/DAIMU_006.JPG" class="imagem-arredondada">
+            <img src="./assets/salao.jpeg" class="imagem-arredondada px-3">
           </div>
         </div>
         <div class="d-flex flex-column flex-md-row-reverse col-12 description">
@@ -87,7 +84,7 @@
             </p>
           </div>
           <div class="col-12 col-md-6 mb-5">
-            <img src="./assets/DAIMU_006.JPG" class="imagem-arredondada">
+            <img src="./assets/salao-superiior.jpeg" class="imagem-arredondada px-3">
           </div>
         </div>
       </div>
@@ -97,18 +94,31 @@
   <section id="galeria">
     <div class="container-md">
       <div class="imagem-principal imagem-arredondada mb-5">
-        <h1 class="text-center text-white">Galeria - <span class="zen-old-mincho-regular">ギャラリー</span></h1>
+        <h1 class="text-center text-white">Galeria - <span class="zen-old-mincho-light">ギャラリー</span></h1>
       </div>
       <!-- <h1 class="text-white py-5 px-4">Our Gallery</h2> -->
       <div class="fotos owl-carousel owl-theme">
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
-        <div class="item"><img src="./assets/DAIMU_006.JPG"></div>
+        <div class="item multi-row-slide">
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/uni.jpeg"></div>
+          <div class="image-container"><img src="./assets/tako.jpeg"></div>
+          <div class="image-container"><img src="./assets/nabeyaki.jpeg"></div>
+          <div class="image-container"><img src="./assets/ebi.jpeg"></div>
+          <div class="image-container"><img src="./assets/fora.jpeg"></div>
+          <div class="image-container"><img src="./assets/nori-taco.jpeg"></div>
+          <div class="image-container"><img src="./assets/katsusando.jpeg"></div>
+        </div>
+
+        <div class="item multi-row-slide">
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+          <div class="image-container"><img src="./assets/ikura.jpeg"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -117,13 +127,13 @@
   <section id="menu">
     <div class="container">
       <div class="titulo text-white text-center">
-        <h1>MENU</h1>
+        <h1>MENU <span class="zen-old-mincho-light">メニュー</span></h1>
         <p>Explore the finest ingredients, curated by our master chefs into two distinct dining journeys</p>
       </div>
 
       <div class="sequencia-lacarte">
         <div class="menus me-lg-5">
-          <img src="/assets/DAIMU_006" class="imagem-arredondada">
+          <img src="/assets/DAIMU_006.JPG" class="imagem-arredondada">
           <div class="py-4 px-4">
             <h2>Sequencia</h2>
             <p class="text-white">Explore the finest ingredients, curated by our master chefs into two distinct dining
@@ -150,10 +160,10 @@
   <section id="evento">
     <div class="container">
       <div class="imagem-principal imagem-arredondada mb-5 flex-column">
-        <h1 class="text-center text-white">Eventos Privativos</h1>
-        <p class="text-white text-center">An unforgettable setting for your most memorable occasions.</p>
+        <h1 class="text-center text-white">Eventos Privativos <br><span class="zen-old-mincho-light">オリジン</span></h1>
+
       </div>
-      <div class="d-flex flex-column py-5 text-center text-white px-5">
+      <div class="d-flex flex-column py-1 text-center text-white px-5">
         <p>
           Explore the finest ingredients, curated by our master chefs into two distinct dining journeys
           Explore the finest ingredients, curated by our master chefs into two distinct dining journeys
@@ -199,7 +209,7 @@
       <div class="agende-evento">
         <div class="container">
           <div class="box-evento">
-            <h3 class="px-3">Planeje Seu Evento Perfeito</h3>
+            <h4 class="px-3">Planeje Seu Evento Perfeito</h4>
             <p class="px-3">Contact our events coordinator directly on Whatsapp to discuss your vision and check
               availability</p>
             <button class="mb-3 button" onclick="window.location.href='https://wa.me/555192199690'">Nos Contate
@@ -215,24 +225,23 @@
     <div class="container d-flex flex-column w-md-50 w-70">
       <form>
         <div class="form-titulo pt-5 px-3 px-md-0">
-          <h2>Faça Sua Reserva</h2>
+          <h1>Faça Sua Reserva</h1>
           <p class="text-white pe-md-5"> At Umami Haven, our philosophy is rooted in the pursuit of perfection.
             Webelieve
             sushi is a delicate balance of tradition, innovation, and the finest ingredients. Our vision is to
           </p>
         </div>
         <div class="inputs px-3 md-px-0">
-          <div class="input-text pt-0">
-            <p>Nome</p>
-            <input name='nome' type="text" placeholder="Nome Completo">
-          </div>
-          <div class="input-text">
-            <p>Telefone</p>
-            <input name='telefone' type="text" placeholder="(99) 99999-9999">
-          </div>
-          <div class="input-text">
-            <p>Email</p>
-            <input name='email' type="text" placeholder="Email">
+          <div class="d-md-flex">
+
+            <div class="input-text pt-0 col-md-6 pe-md-3">
+              <p>Nome</p>
+              <input name='nome' type="text" placeholder="Nome Completo">
+            </div>
+            <div class="input-text col-md-6 ps-md-3 ">
+              <p>Telefone</p>
+              <input name='telefone' type="text" placeholder="(99) 99999-9999">
+            </div>
           </div>
           <div class="d-flex">
 
@@ -246,8 +255,12 @@
             </div>
 
           </div>
+          <div class="input-text col-md-6 pe-md-3">
+            <p>Email</p>
+            <input name='email' type="text" placeholder="Email">
+          </div>
           <div class="pt-3">
-            <button class="text-white w-100 button"> Confirmar Reserva </button>
+            <button class="text-white w-100 button"> Solicitar Reserva </button>
           </div>
         </div>
       </form>
@@ -269,8 +282,8 @@
             <div class="info">
               <h4>Contato</h4>
               <div class="d-flex-column info-p">
-                <p class="w-100">(51) 99999-9999</p>
                 <p>daimu.moinhos@gmail.com.br</p>
+                <p class="w-100">(51) 99999-9999</p>
               </div>
             </div>
             <div class="info">
@@ -283,7 +296,7 @@
         </div>
         <div class="fale-button">
           <button class="button mapa-button">Veja no Mapa</button>
-          <button class="button" onclick="window.location.href='https://wa.me/555192199690'">Faça uma Reserva</button>
+          <button class="button" onclick="window.location.href='https://wa.me/555192199690'">Entre em Contato</button>
         </div>
 
       </div>
