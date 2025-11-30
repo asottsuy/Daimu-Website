@@ -1,6 +1,5 @@
 @import url("default.css");
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap");
 
 body {
   background-color: var(--color-light);
@@ -13,11 +12,12 @@ body {
   background-color: var(--color-primary);
   border-radius: var(--radius-lg);
   color: white;
-  width: 50%;
+  width: 70%;
   height: 6vh;
   border: 0;
   /* Opcional: definir tamanho do texto do botão */
-  font-size: var(--text-base);
+  font-size: var(--text-);
+  margin-bottom: 3vh;
 }
 
 .button:hover {
@@ -31,7 +31,7 @@ body.dark {
 
 .footer {
   position: relative;
-  height: 10vh;
+  height: 20vh;
   border-top: 0.5px solid rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.5);
   display: flex;
@@ -44,6 +44,12 @@ body.dark {
 
 .footer i {
   color: var(--color-golden);
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .logo-img {
@@ -60,9 +66,8 @@ img:hover {
 }
 
 .container-menu {
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.2)),
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url(/assets/DAIMU_011.JPG);
   background-size: cover;
   background-position: center;
@@ -100,6 +105,7 @@ img:hover {
   width: 100%;
   border-bottom: 0.5px solid var(--color-golden);
   z-index: 1000 !important;
+  flex-wrap: nowrap;
 }
 
 .navbar h1 {
@@ -162,8 +168,8 @@ img:hover {
 }
 
 .our-story {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.1)), url("/assets/comer-e-beber-poa-restaurante-daimu-0021.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+    url("/assets/comer-e-beber-poa-restaurante-daimu-0021.webp");
   background-position: center;
   width: 100%;
   background-size: cover;
@@ -173,10 +179,10 @@ img:hover {
   flex-direction: column-reverse;
 }
 
-.our-story>h1 {
+.our-story > h1 {
   padding: 0 0 10px 20px;
   font-size: var(--text-4xl);
-  font-weight: 800
+  font-weight: 800;
 }
 
 .our-philosophy h2 {
@@ -213,14 +219,14 @@ img:hover {
   align-items: center;
 }
 
-.imagem-principal>h1 {
+.imagem-principal > h1 {
   font-size: var(--text-4xl);
   font-weight: 800;
   display: flex;
   flex-direction: column;
 }
 
-.imagem-principal>p {
+.imagem-principal > p {
   font-size: var(--text-base);
   /* 20px */
   font-weight: 800;
@@ -239,32 +245,11 @@ img:hover {
   margin: 0 auto;
 }
 
-.multi-row-slide {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.multi-row-slide .image-container {
-  width: 25%;
-  padding: 5px;
-  box-sizing: border-box;
-
-}
-
-.multi-row-slide .image-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px !important;
-  display: block;
-    max-height: 400px;
-}
-
 /* SECTION 4 MENU */
 #menu {
   border-bottom: 0.5px solid var(--color-golden);
-  height: 140vh;
-  margin-top: 3vh;
+  min-height: 140vh;
+  margin: 3vh 0;
 }
 
 .titulo {
@@ -317,6 +302,29 @@ img:hover {
   font-size: var(--text-md) !important;
 }
 
+.insta-iframe {
+  width: 100%;
+  max-width: 450px;
+  min-height: 395px;
+  border: none;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-principal-evento {
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+  background-image: url(/assets/2021-09-15.webp);
+  background-repeat: no-repeat;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .titulos {
   display: flex;
   justify-content: center;
@@ -344,11 +352,13 @@ img:hover {
   color: var(--color-primary) !important;
   cursor: pointer;
 }
+.espacos-evento img {
+  max-height: 500px;
+}
 
 .espacos-evento .description {
   padding: 5vh 0;
 }
-
 
 .box-evento {
   background-color: var(--color-primary-light);
@@ -356,7 +366,7 @@ img:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 40vh;
   margin: 5vh 0;
   text-align: center;
 }
@@ -383,7 +393,7 @@ img:hover {
 
 /* Section 6 form */
 #formulario {
-  height: 90vh;
+  min-height: 90vh;
   border-bottom: 0.5px solid var(--color-golden);
 }
 
@@ -392,13 +402,13 @@ img:hover {
   border-bottom: 0.5px solid var(--color-light);
 }
 
-.form-titulo>h1 {
+.form-titulo > h1 {
   color: var(--color-light);
   font-size: var(--text-3xl);
   font-weight: 800;
 }
 
-.form-titulo>p {
+.form-titulo > p {
   font-size: var(--text-sm);
 }
 
@@ -412,13 +422,12 @@ img:hover {
 }
 
 #fale-conosco {
-  margin-top: 10vh;
-  height: 90vh;
+  margin: 5vh 0;
+  min-height: 90vh;
 }
 
 .nos-visite h2 {
-  /* Padronizado de 58px para 56px (4xl) para consistência, ou crie uma var extra */
-  font-size: var(--text-4xl);
+  font-size: var(--text-3xl);
   font-weight: 800;
 }
 
@@ -440,7 +449,7 @@ img:hover {
 
 .info p {
   width: 50%;
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
 }
 
 .fale-button {
@@ -496,7 +505,7 @@ input {
     background-color: var(--color-dark);
     max-width: 60%;
     width: 250px;
-    font-weight: 800;
+    font-weight: 600;
   }
 
   .nav-menu li {
@@ -543,32 +552,6 @@ input {
   .info-p :last-child {
     text-align: right;
   }
-
-  .multi-row-slide {
-    display: flex;
-    flex-wrap: nowrap;
-    scroll-snap-type: x mandatory;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-    gap: 10px;
-    padding-bottom: 20px;
-  }
-
-  .multi-row-slide .image-container {
-    flex: 0 0 100%;
-    /* grow, nao estica . shrink, mantem o tamanho maximo. tamanho referente a largura do pai*/
-    width: 100%;
-    scroll-snap-align: center;
-    padding: 0 10px;
-  }
-
-  .multi-row-slide .image-container img {
-    width: 100%;
-    height: 30vh;
-    object-fit: cover;
-    /* Corta a imagem para preencher sem esticar */
-    border-radius: 10px;
-  }
 }
 
 /* Desktop */
@@ -578,7 +561,7 @@ input {
   }
 
   .footer {
-    font-size: var(--text-md);
+    font-size: var(--text-xs);
   }
 
   .nav-menu {
@@ -589,12 +572,12 @@ input {
   }
 
   .navbar h1 {
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
     /* Desktop sobe para ~40-46px */
   }
 
-  .imagem-principal>h1 {
-    font-size: var(--text-5xl);
+  .imagem-principal > h1 {
+    font-size: var(--text-4xl);
   }
 
   .our-philosophy img {
@@ -608,9 +591,9 @@ input {
     align-items: center;
   }
 
-  .our-story>h1 {
+  .our-story > h1 {
     padding: 0 0 20px 22%;
-    font-size: var(--text-5xl);
+    font-size: var(--text-4xl);
   }
 
   .imagem-principal {
@@ -624,7 +607,7 @@ input {
 
   .sequencia-lacarte {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .menus {
@@ -632,12 +615,12 @@ input {
   }
 
   .titulo h1 {
-    font-size: var(--text-5xl);
+    font-size: var(--text-4xl);
     font-weight: 800;
   }
 
   #menu {
-    height: 100vh;
+    min-height: 130vh;
   }
 
   .input-text p {
@@ -689,19 +672,18 @@ input {
     margin: 0 30vw;
   }
 
-
   .zen-old-mincho-regular {
     font-family: "Zen Old Mincho", serif !important;
     font-weight: 400;
     font-style: normal;
-    font-size: var(--text-5xl);
+    font-size: var(--text-4xl);
   }
 
   .zen-old-mincho-light {
     font-family: "Zen Old Mincho", serif !important;
     font-weight: 400;
     font-style: normal;
-    font-size: var(--text-4xl);
+    font-size: var(--text-3xl);
   }
 
   .nav-menu li a span {
@@ -709,31 +691,31 @@ input {
   }
 
   .our-philosophy h2 {
-    font-size: var(--text-4xl);
+    font-size: var(--text-3xl);
     color: var(--color-golden);
     padding-top: 10%;
   }
 
   .our-philosophy p {
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
     padding: 0 10%;
   }
 
   .nav-menu li a {
-    font-size: var(--text-lg);
+    font-size: var(--text-sm);
     padding: 0 2vh;
   }
 
-  .titulo>p {
+  .titulo > p {
     font-size: var(--text-md);
   }
 
   #evento h2 {
-    font-size: var(--text-4xl);
+    font-size: var(--text-2xl);
   }
 
   #evento p {
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
   }
 
   .titulos {
@@ -741,10 +723,14 @@ input {
   }
 
   #formulario {
-    height: 80vh;
+    min-height: 110vh;
   }
 
-  .form-titulo>p {
-    font-size: var(--text-md);
+  .form-titulo > p {
+    font-size: var(--text-sm);
+  }
+
+  .input-text p {
+    font-size: var(--text-sm);
   }
 }
