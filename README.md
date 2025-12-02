@@ -9,8 +9,8 @@ redes sociais
 
 formulario em 2 colunas para tela grande x
 
-adicionar os dois menus /(modal/paginas)
+adicionar os dois menus /(modal/paginas) 
 
-botar masi efeito js
+botar masi efeito js x
 
 slider na galeria desktop x

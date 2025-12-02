@@ -68,7 +68,7 @@ img:hover {
 .container-menu {
   min-height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-    url(/assets/DAIMU_011.JPG);
+    url(/assets/DAIMU_011.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -209,7 +209,7 @@ img:hover {
 .imagem-principal {
   margin-top: 5vh;
   margin-bottom: 1vh;
-  background-image: url(/assets/ebi-furai.jpeg);
+  background-image: url(/assets/ebi-furai.webp);
   background-repeat: no-repeat;
   height: 50vh;
   background-size: cover;
@@ -242,7 +242,7 @@ img:hover {
 .fotos img {
   border-radius: 10px !important;
   width: 100%;
-  max-height: 60vh;
+  max-height: 40vh;
   margin: 0 auto;
   object-fit: cover;
 }
@@ -250,7 +250,7 @@ img:hover {
 /* SECTION 4 MENU */
 #menu {
   border-bottom: 0.5px solid var(--color-golden);
-  min-height: 140vh;
+  min-height: 120vh;
   margin: 3vh 0;
 }
 
@@ -400,7 +400,7 @@ iframe {
 
 /* Section 6 form */
 #formulario {
-  min-height: 90vh;
+  min-height: 80vh;
   border-bottom: 0.5px solid var(--color-golden);
 }
 
@@ -588,8 +588,11 @@ input {
   }
 
   .our-philosophy img {
-    width: auto;
+    width: 100%;
     padding: 0 30px;
+      max-height: 60vh;
+  margin: 0 auto;
+  object-fit: cover;
   }
 
   .description {
@@ -608,7 +611,7 @@ input {
   }
 
   .fotos img {
-    max-height: 50vh;
+    max-height: 35vh;
     padding: 8px 2px;
   }
 
@@ -627,7 +630,7 @@ input {
   }
 
   #menu {
-    min-height: 130vh;
+    min-height: 100vh;
   }
 
   .input-text p {
@@ -722,7 +725,7 @@ input {
   }
 
   #evento p {
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
   }
 
   .titulos {
